@@ -1,0 +1,24 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.full-body {
+    background-image: linear-gradient(to left bottom, #000000, #2F15D0, #1fa911);
+}
+
+.custom-input {
+    height: 55px;
+    width: 365px;
+    border: 2px dashed #E5E5E6;
+    padding-left: 10px;
+    transition: border-color 0.3s;
+  }
+
+  .custom-input.invalid {
+    border-color: red !important;
+  }
