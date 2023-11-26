@@ -23,27 +23,27 @@ export default function LeftInfo() {
     {
       headerName: "Jack F",
       position: "Ex Blackrock PM",
-      discription:
+      description:
         "“Love how Loch integrates portfolio analytics and whale watching into one unified app.”",
     },
     {
       headerName: "Yash P",
       position: "Research, 3poch Crypto Hedge Fund",
-      discription:
+      description:
         "“I use Loch everyday now. I dont think I could analyze crypto whale trends markets without it. Im addicted!”",
     },
     {
       headerName: "Shiv S",
       position: "Co-Founder Magik Labs",
-      discription:
+      description:
         "“Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple.”",
     },
   ];
   return (
-    <div className="full-body w-[55%]">
+    <div className="full-body lg:w-[55%]">
       <div className="h-full py-20 justify-evenly">
-        <div className="flex gap-16">
-          <div className="ml-14">
+        <div className="lg:flex gap-16 px-4 lg:px-0">
+          <div className="lg:ml-14">
             <a className="font-white">
               <Bell color="white" size={40} />
             </a>
@@ -62,26 +62,27 @@ export default function LeftInfo() {
             }}
             modules={[Autoplay]}
             loop={true}
+            className="mt-8 lg:mt-0"
           >
             <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-md p-2 w-[189px] h-[171px]">
+              <div className="bg-white rounded-lg shadow-md p-4 lg:w-[189px] w-full mx-auto h-[171px] flex flex-col gap-1 justify-between">
                 <div className="flex justify-between">
                   <a className="font-white">
                     <Bell color="black" size={20} />
                   </a>
                   <p className="text-sm">Save</p>
                 </div>
-                <p className="text-sm mt-8 px-4">
+                <p className="text-sm">
                   We’ll be sending notifications to you here
                 </p>
                 <input
-                  className="mt-2 w-[150px] h-[30px] border border-[#E5E5E6] ml-3"
+                  className="mt-2 w-[150px] h-[30px] border border-[#E5E5E6]"
                   type="text"
                 ></input>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-md p-2 w-[189px] h-[171px]">
+              <div className="bg-white rounded-lg shadow-md p-4 mx-auto lg:w-[189px] w-full h-[171px] flex flex-col gap-1 justify-between">
                 <div className="flex justify-between">
                   <a className="font-white">
                     <img
@@ -97,19 +98,17 @@ export default function LeftInfo() {
                     value="HTML"
                   />
                 </div>
-                <p className="text-sm mt-6 px-4">
+                <p className="text-sm">
                   We’ll be sending notifications to you here
                 </p>
-                <div className="w-[80px] h-[20px] bg-[#E5E5E6] mt-3">
-                  <p className="text-xs flex justify-center items-cente text-white">
+                  <p className="text-xs flex justify-center items-center text-white w-[80px] h-[20px] bg-[#E5E5E6]">
                     {" "}
                     $1,000.00
                   </p>
-                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-md p-2 w-[189px] h-[171px]">
+              <div className="bg-white rounded-lg shadow-md mx-auto p-4 lg:w-[189px] w-full h-[171px] flex flex-col gap-1 justify-between">
                 <div className="flex justify-between">
                   <a className="font-white">
                     <img
@@ -125,31 +124,30 @@ export default function LeftInfo() {
                     value="HTML"
                   />
                 </div>
-                <p className="text-sm mt-6 px-4">
+                <p className="text-sm">
                   We’ll be sending notifications to you here
                 </p>
 
-                <div className="w-[80px] h-[20px] bg-[#E5E5E6] mt-3">
-                  <p className="text-xs flex justify-center items-center text-white">
-                    {" "}
+                <div className="w-[80px] h-[20px]  mt-3">
+                  <p className="text-xs flex justify-center items-center text-white p-1 bg-[#E5E5E6]">
                     &gt;30 days
                   </p>
                 </div>
-                <p className="text-xs mt-1 px-4">Become Active</p>
+                <p className="text-xs mt-1">Become Active</p>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="flex mx-14 mt-16">
-          <div className="max-w-[40%]">
+        <div className="lg:flex lg:mx-14 mt-16 px-4 lg:px-0">
+          <div className="lg:max-w-[40%] max-w-full">
             <img
               className="object-contain"
               src="/output-onlinepngtools.png"
               alt="Girl in a jacket"
             />
           </div>
-          <div className="text-end pl-8">
-            <div className="flex justify-end">
+          <div className="lg:text-end text-center lg:pl-8 mt-6 lg:mt-0">
+            <div className="lg:flex hidden lg:justify-end">
               <img className="object-contain" src="/Vector.png" alt="" />
             </div>
             <h4 className="text-4xl text-white pt-4">
@@ -167,16 +165,25 @@ export default function LeftInfo() {
           </h4>
           <hr className="text-[#E5E5E680] mt-6" />
         </div>
-        <div className="mt-8 ml-14 flex items-end">
+        <div className="mt-8 lg:ml-14 flex lg:items-end lg:flex-row flex-col gap-8 lg:gap-0 items-center">
           <img className="object-contain" src="/VectorS.png" alt="" />
 
-          <Swiper slidesPerView={2} centeredSlides={true}         spaceBetween={30}
- className="ml-5">
+          <Swiper
+            slidesPerView={1}
+            className="lg:ml-5 px-4 max-w-full w-full"
+            spaceBetween={30}
+            breakpoints={{
+              1024: {
+                slidesPerView: 2,
+                centeredSlides: true,
+              },
+            }}
+          >
             {personData.map((data, index) => (
-              <SwiperSlide key={index} className="max-w-fit">
-                <div key={index} className="slider-item">
-                  <SwiperCard props={data}></SwiperCard>
-                </div>
+              <SwiperSlide key={index} className="">
+            
+                  <SwiperCard props={data}/>
+
               </SwiperSlide>
             ))}
           </Swiper>

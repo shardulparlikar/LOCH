@@ -6,15 +6,13 @@ import RightInfo  from "./RightInfo";
 export default function Information() {
   return (
     <>
-      <div className="">
-        <div className="flex">
+        <div className="lg:flex">
           {/* left component */}
           <LeftInfo />
 
           {/* right component */}
           <RightInfo/>
         </div>
-      </div>
     </>
   );
 };

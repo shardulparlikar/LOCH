@@ -7,9 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
-        <Information></Information>
-      </div>
+      <Information></Information>
     </>
   )
 }
